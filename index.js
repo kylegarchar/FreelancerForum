@@ -14,11 +14,12 @@ function renderFreelancers() {
   freelancerList.innerHTML = '';
 
   freelancers.forEach(freelancer => {
-    const list = document.createElement('tr');
+    const list = document.createElement('dt');
     list.innerHTML = `
-      <td>${freelancer.name}</td>
-      <td>${freelancer.occupation}</td>
-      <td>$${freelancer.price}</td>
+      <dt>${freelancer.name}</dt>
+      <dd>${freelancer.occupation}</dd>
+      <dd>$${freelancer.price}</dd>
+      
     `;
     freelancerList.appendChild(list);
   });
